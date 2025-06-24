@@ -32,7 +32,7 @@ const translations: Record<Lang, Translation> = {
   es: {
     title: "Desarrollador iOS Senior",
     about: "Sobre mí",
-    aboutText: "He estado en el área de desarrollo móvil desde 2011, participando en todos los aspectos del ciclo de vida de un proyecto: desde la definición del producto, diseño técnico, planificación de hitos, creación de prototipos, desarrollo, publicación y distribución. Ser una persona orientada a resultados y analítica me ha ayudado a encontrar rápidamente buenas soluciones para resolver problemas complejos. Actualmente, me enfoco principalmente en liderar el equipo de iOS, configurar pipelines de CI/CD, definir la arquitectura de la aplicación, implementar nuevas funcionalidades y brindar mentoría en un entorno ágil. /nPara conocer un poco más sobre mí, te invito a visitar mi perfil.",
+    aboutText: "He estado en el área de desarrollo móvil desde 2011, participando en todos los aspectos del ciclo de vida de un proyecto: desde la definición del producto, diseño técnico, planificación de hitos, creación de prototipos, desarrollo, publicación y distribución. Ser una persona orientada a resultados y analítica me ha ayudado a encontrar rápidamente buenas soluciones para resolver problemas complejos. Actualmente, me enfoco principalmente en liderar el equipo de iOS, configurar pipelines de CI/CD, definir la arquitectura de la aplicación, implementar nuevas funcionalidades y brindar mentoría en un entorno ágil. Para conocer un poco más sobre mí, te invito a visitar mi perfil.",
     skills: "Habilidades Técnicas",
     skillsList: [
       "Lenguajes: Swift, Objective-C, SwiftUI",
@@ -71,7 +71,7 @@ const translations: Record<Lang, Translation> = {
   en: {
     title: "Senior iOS Developer",
     about: "About Me",
-    aboutText: "I have been in the mobile development area since 2011 being involved in every aspect of a project life cycle, from product definition, technical design, planning milestones, prototyping, development, release and distribution. Being a result-driven and an analytical person helped me to rapidly find good approaches for solving complex problems. These days I'm mainly focused on leading the iOS team, setting up CI/CD pipelines, defining the App's architecture, implementing new features and mentoring others in an agile environment. /nTo know a bit more about me, please take a look to my profile.",
+    aboutText: "I have been in the mobile development area since 2011 being involved in every aspect of a project life cycle, from product definition, technical design, planning milestones, prototyping, development, release and distribution. Being a result-driven and an analytical person helped me to rapidly find good approaches for solving complex problems. These days I'm mainly focused on leading the iOS team, setting up CI/CD pipelines, defining the App's architecture, implementing new features and mentoring others in an agile environment. To know a bit more about me, please take a look to my profile.",
     skills: "Technical Skills",
     skillsList: [
       "Languages: Swift, Objective-C, SwiftUI",
