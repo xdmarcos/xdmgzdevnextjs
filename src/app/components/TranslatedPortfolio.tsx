@@ -3,15 +3,123 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
+type Lang = "es" | "en";
+
+type Translation = {
+  title: string;
+  about: string;
+  aboutText: string;
+  skills: string;
+  skillsList: string[];
+  experience: string;
+  jobs: { company: string; role: string }[];
+  projects: string;
+  project1: string;
+  project2: string;
+  education: string;
+  educationList: string[];
+  contact: string;
+  form: {
+    name: string;
+    email: string;
+    message: string;
+    submit: string;
+  };
+  footer: string;
+};
+
+const translations: Record<Lang, Translation> = {
+  es: {
+    title: "Desarrollador iOS Senior & Líder de Tribu Apps",
+    about: "Sobre mí",
+    aboutText: "Desarrollador iOS desde 2011, con experiencia en todo el ciclo de vida de apps móviles nativas. Enfocado en arquitectura, CI/CD, trabajo ágil y liderazgo técnico de equipos. Actualmente liderando el equipo de Apps en Xapo Bank.",
+    skills: "Habilidades Técnicas",
+    skillsList: [
+      "Lenguajes: Swift, Objective-C, SwiftUI",
+      "Arquitecturas: CLEAN, MVVM, VIPER, TCA",
+      "Testing: XCTest, KIF",
+      "CI/CD: Fastlane, Jenkins, Azure, Bitrise, CircleCI",
+      "Buenas prácticas: SOLID, Atomic Design",
+      "Metodologías ágiles: SCRUM, Kanban"
+    ],
+    experience: "Experiencia Profesional",
+    jobs: [
+      { company: "Xapo Bank", role: "Apps Tribe Lead, Senior iOS Developer (2022–presente)" },
+      { company: "ABN", role: "Senior iOS Developer (2021–2022)" },
+      { company: "Rabobank", role: "Team Lead, Senior iOS Developer (2019–2021)" },
+      { company: "Accenture Interactive", role: "Team Lead, Senior iOS Developer (2017–2019)" },
+      { company: "Mobgen", role: "Team Lead, iOS Developer (2014–2017)" }
+    ],
+    projects: "Proyectos con Capturas",
+    project1: "Plataforma bancaria digital.",
+    project2: "App de banca móvil con trading integrado.",
+    education: "Educación y Certificaciones",
+    educationList: [
+      "Máster en Ingeniería de Software – Universidad de Vigo",
+      "Grado en Ingeniería Informática – Universidad de Vigo",
+      "Scrum Master & Product Owner – Scrum.org"
+    ],
+    contact: "Contacto",
+    form: {
+      name: "Nombre:",
+      email: "Correo electrónico:",
+      message: "Mensaje:",
+      submit: "Enviar"
+    },
+    footer: "Portfolio Web con Next.js"
+  },
+  en: {
+    title: "Senior iOS Developer & Apps Tribe Lead",
+    about: "About Me",
+    aboutText: "iOS developer since 2011 with full lifecycle experience building native mobile apps. Focused on architecture, CI/CD, agile practices, and technical leadership. Currently leading the Apps team at Xapo Bank.",
+    skills: "Technical Skills",
+    skillsList: [
+      "Languages: Swift, Objective-C, SwiftUI",
+      "Architectures: CLEAN, MVVM, VIPER, TCA",
+      "Testing: XCTest, KIF",
+      "CI/CD: Fastlane, Jenkins, Azure, Bitrise, CircleCI",
+      "Best Practices: SOLID, Atomic Design",
+      "Agile Methods: SCRUM, Kanban"
+    ],
+    experience: "Work Experience",
+    jobs: [
+      { company: "Xapo Bank", role: "Apps Tribe Lead, Senior iOS Developer (2022–present)" },
+      { company: "ABN", role: "Senior iOS Developer (2021–2022)" },
+      { company: "Rabobank", role: "Team Lead, Senior iOS Developer (2019–2021)" },
+      { company: "Accenture Interactive", role: "Team Lead, Senior iOS Developer (2017–2019)" },
+      { company: "Mobgen", role: "Team Lead, iOS Developer (2014–2017)" }
+    ],
+    projects: "Featured Projects",
+    project1: "Digital banking platform.",
+    project2: "Mobile banking app with integrated trading.",
+    education: "Education & Certifications",
+    educationList: [
+      "Master in Software Engineering – University of Vigo",
+      "Bachelor in Computer Engineering – University of Vigo",
+      "Scrum Master & Product Owner – Scrum.org"
+    ],
+    contact: "Contact",
+    form: {
+      name: "Name:",
+      email: "Email:",
+      message: "Message:",
+      submit: "Send"
+    },
+    footer: "Portfolio Website built with Next.js"
+  }
+};
+
 export default function TranslatedPortfolio() {
-  const [lang, setLang] = useState("es");
+  const [lang, setLang] = useState<Lang>("es");
 
   useEffect(() => {
-    const storedLang = localStorage.getItem("preferredLang");
-    if (storedLang) setLang(storedLang);
+    const storedLang = localStorage.getItem("preferredLang") as Lang;
+    if (storedLang === "es" || storedLang === "en") {
+      setLang(storedLang);
+    }
   }, []);
 
-  const changeLang = (newLang: string) => {
+  const changeLang = (newLang: Lang) => {
     setLang(newLang);
     localStorage.setItem("preferredLang", newLang);
   };
@@ -114,85 +222,4 @@ const styles = {
     cursor: "pointer",
     borderRadius: "4px",
   },
-};
-
-const translations = {
-  es: {
-    title: "Desarrollador iOS Senior & Líder de Tribu Apps",
-    about: "Sobre mí",
-    aboutText: "Desarrollador iOS desde 2011, con experiencia en todo el ciclo de vida de apps móviles nativas. Enfocado en arquitectura, CI/CD, trabajo ágil y liderazgo técnico de equipos. Actualmente liderando el equipo de Apps en Xapo Bank.",
-    skills: "Habilidades Técnicas",
-    skillsList: [
-      "Lenguajes: Swift, Objective-C, SwiftUI",
-      "Arquitecturas: CLEAN, MVVM, VIPER, TCA",
-      "Testing: XCTest, KIF",
-      "CI/CD: Fastlane, Jenkins, Azure, Bitrise, CircleCI",
-      "Buenas prácticas: SOLID, Atomic Design",
-      "Metodologías ágiles: SCRUM, Kanban"
-    ],
-    experience: "Experiencia Profesional",
-    jobs: [
-      { company: "Xapo Bank", role: "Apps Tribe Lead, Senior iOS Developer (2022–presente)" },
-      { company: "ABN", role: "Senior iOS Developer (2021–2022)" },
-      { company: "Rabobank", role: "Team Lead, Senior iOS Developer (2019–2021)" },
-      { company: "Accenture Interactive", role: "Team Lead, Senior iOS Developer (2017–2019)" },
-      { company: "Mobgen", role: "Team Lead, iOS Developer (2014–2017)" }
-    ],
-    projects: "Proyectos con Capturas",
-    project1: "Plataforma bancaria digital.",
-    project2: "App de banca móvil con trading integrado.",
-    education: "Educación y Certificaciones",
-    educationList: [
-      "Máster en Ingeniería de Software – Universidad de Vigo",
-      "Grado en Ingeniería Informática – Universidad de Vigo",
-      "Scrum Master & Product Owner – Scrum.org"
-    ],
-    contact: "Contacto",
-    form: {
-      name: "Nombre:",
-      email: "Correo electrónico:",
-      message: "Mensaje:",
-      submit: "Enviar"
-    },
-    footer: "Portfolio Web con Next.js"
-  },
-  en: {
-    title: "Senior iOS Developer & Apps Tribe Lead",
-    about: "About Me",
-    aboutText: "iOS developer since 2011 with full lifecycle experience building native mobile apps. Focused on architecture, CI/CD, agile practices, and technical leadership. Currently leading the Apps team at Xapo Bank.",
-    skills: "Technical Skills",
-    skillsList: [
-      "Languages: Swift, Objective-C, SwiftUI",
-      "Architectures: CLEAN, MVVM, VIPER, TCA",
-      "Testing: XCTest, KIF",
-      "CI/CD: Fastlane, Jenkins, Azure, Bitrise, CircleCI",
-      "Best Practices: SOLID, Atomic Design",
-      "Agile Methods: SCRUM, Kanban"
-    ],
-    experience: "Work Experience",
-    jobs: [
-      { company: "Xapo Bank", role: "Apps Tribe Lead, Senior iOS Developer (2022–present)" },
-      { company: "ABN", role: "Senior iOS Developer (2021–2022)" },
-      { company: "Rabobank", role: "Team Lead, Senior iOS Developer (2019–2021)" },
-      { company: "Accenture Interactive", role: "Team Lead, Senior iOS Developer (2017–2019)" },
-      { company: "Mobgen", role: "Team Lead, iOS Developer (2014–2017)" }
-    ],
-    projects: "Featured Projects",
-    project1: "Digital banking platform.",
-    project2: "Mobile banking app with integrated trading.",
-    education: "Education & Certifications",
-    educationList: [
-      "Master in Software Engineering – University of Vigo",
-      "Bachelor in Computer Engineering – University of Vigo",
-      "Scrum Master & Product Owner – Scrum.org"
-    ],
-    contact: "Contact",
-    form: {
-      name: "Name:",
-      email: "Email:",
-      message: "Message:",
-      submit: "Send"
-    },
-    footer: "Portfolio Website built with Next.js"
-  }
 };
