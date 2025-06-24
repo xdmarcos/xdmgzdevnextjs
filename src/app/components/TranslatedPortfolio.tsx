@@ -185,7 +185,7 @@ export default function TranslatedPortfolio() {
 
       <section>
         <h2>{t.contact}</h2>
-        <form action="mailto:hello@xdmgz.com" method="post" enctype="text/plain">
+        <form action="mailto:hello@xdmgz.com" method="post" encType="text/plain">
           <label htmlFor="name">{t.form.name}</label>
           <input type="text" name="name" required />
           <label htmlFor="email">{t.form.email}</label>
