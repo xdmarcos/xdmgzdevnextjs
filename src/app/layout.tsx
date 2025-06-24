@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "xdmGzDev",
   description: " Marcos González, iOS Developer.",
   icons: {
-    icon: "../public/favicon.ico",
+    icon: "/favicon.ico",
   },
 };
 
