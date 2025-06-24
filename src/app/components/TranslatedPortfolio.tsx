@@ -32,7 +32,7 @@ const translations: Record<Lang, Translation> = {
   es: {
     title: "Desarrollador iOS Senior",
     about: "Sobre mí",
-    aboutText: "Desarrollador iOS desde 2011, con experiencia en todo el ciclo de vida de apps móviles nativas. Enfocado en arquitectura, CI/CD, trabajo ágil y liderazgo técnico de equipos. Actualmente liderando el equipo de Apps en Xapo Bank.",
+    aboutText: "He estado en el área de desarrollo móvil desde 2011, participando en todos los aspectos del ciclo de vida de un proyecto: desde la definición del producto, diseño técnico, planificación de hitos, creación de prototipos, desarrollo, publicación y distribución. Ser una persona orientada a resultados y analítica me ha ayudado a encontrar rápidamente buenas soluciones para resolver problemas complejos. Actualmente, me enfoco principalmente en liderar el equipo de iOS, configurar pipelines de CI/CD, definir la arquitectura de la aplicación, implementar nuevas funcionalidades y brindar mentoría en un entorno ágil. /nPara conocer un poco más sobre mí, te invito a visitar mi perfil.",
     skills: "Habilidades Técnicas",
     skillsList: [
       "Lenguajes: Swift, Objective-C, SwiftUI",
@@ -71,7 +71,7 @@ const translations: Record<Lang, Translation> = {
   en: {
     title: "Senior iOS Developer",
     about: "About Me",
-    aboutText: "iOS developer since 2011 with full lifecycle experience building native mobile apps. Focused on architecture, CI/CD, agile practices, and technical leadership. Currently leading the Apps team at Xapo Bank.",
+    aboutText: "I have been in the mobile development area since 2011 being involved in every aspect of a project life cycle, from product definition, technical design, planning milestones, prototyping, development, release and distribution. Being a result-driven and an analytical person helped me to rapidly find good approaches for solving complex problems. These days I'm mainly focused on leading the iOS team, setting up CI/CD pipelines, defining the App's architecture, implementing new features and mentoring others in an agile environment. /nTo know a bit more about me, please take a look to my profile.",
     skills: "Technical Skills",
     skillsList: [
       "Languages: Swift, Objective-C, SwiftUI",
@@ -105,7 +105,7 @@ const translations: Record<Lang, Translation> = {
       message: "Message:",
       submit: "Send"
     },
-    footer: "xdmGzDev"
+    footer: "Marcos González"
   }
 };
 
@@ -197,7 +197,7 @@ export default function TranslatedPortfolio() {
       </section>
 
       <footer>
-        © 2025 Marcos González – {t.footer}
+        © 2025 xdmGzDev – {t.footer}
       </footer>
     </main>
   );
