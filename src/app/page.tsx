@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -75,7 +77,7 @@ export default function Home() {
 
       <section>
         <h2>{t.contact}</h2>
-        <form action="https://formspree.io/f/mwkgyqqz" method="POST">
+      <form action="mailto:hello@xdmgz.dev" method="post" enctype="text/plain">
           <label htmlFor="name">{t.form.name}</label>
           <input type="text" name="name" required />
           <label htmlFor="email">{t.form.email}</label>
