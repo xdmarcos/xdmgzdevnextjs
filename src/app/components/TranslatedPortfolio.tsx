@@ -30,7 +30,7 @@ type Translation = {
 
 const translations: Record<Lang, Translation> = {
   es: {
-    title: "Desarrollador iOS Senior & Líder de Tribu Apps",
+    title: "Desarrollador iOS Senior",
     about: "Sobre mí",
     aboutText: "Desarrollador iOS desde 2011, con experiencia en todo el ciclo de vida de apps móviles nativas. Enfocado en arquitectura, CI/CD, trabajo ágil y liderazgo técnico de equipos. Actualmente liderando el equipo de Apps en Xapo Bank.",
     skills: "Habilidades Técnicas",
@@ -69,7 +69,7 @@ const translations: Record<Lang, Translation> = {
     footer: "Portfolio Web con Next.js"
   },
   en: {
-    title: "Senior iOS Developer & Apps Tribe Lead",
+    title: "Senior iOS Developer",
     about: "About Me",
     aboutText: "iOS developer since 2011 with full lifecycle experience building native mobile apps. Focused on architecture, CI/CD, agile practices, and technical leadership. Currently leading the Apps team at Xapo Bank.",
     skills: "Technical Skills",
@@ -105,7 +105,7 @@ const translations: Record<Lang, Translation> = {
       message: "Message:",
       submit: "Send"
     },
-    footer: "Portfolio Website built with Next.js"
+    footer: "xdmGzDev"
   }
 };
 
@@ -129,7 +129,7 @@ export default function TranslatedPortfolio() {
   return (
     <main className="container">
       <header className="centered">
-        <h1>Marcos A. González Piñeiro</h1>
+        <h1>xdmGzDev</h1>
         <p>{t.title}</p>
         <div className="social">
           <a href="mailto:xdmgzdev@gmail.com">✉️ Email</a>{" "}
